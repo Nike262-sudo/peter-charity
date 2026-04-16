@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 const links = [
   { label: 'About', id: 'about' },
   { label: 'Focus', id: 'focus' },
+  { label: 'Projects', id: 'projects' },
   { label: 'Impact', id: 'impact' },
   { label: 'Stories', id: 'stories' },
   { label: 'Donate', id: 'donate' },
@@ -49,7 +50,7 @@ export function Nav() {
 
         {/* Desktop links */}
         <div className="hidden md:flex items-center gap-5">
-          {links.slice(0, 5).map((l) => (
+          {links.slice(0, 6).map((l) => (
             <button
               key={l.id}
               onClick={() => handleNav(l.id)}
