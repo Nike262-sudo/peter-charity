@@ -47,22 +47,21 @@ function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
             className="text-4xl sm:text-5xl lg:text-[3.4rem] font-extrabold text-white leading-[1.08] mb-6"
-            style={{ fontFamily: "'Georgia', 'Times New Roman', serif", textShadow: '0 2px 20px rgba(0,0,0,0.2)' }}
           >
-            Serving Our
+            Helping People in
             <br />
-            Community,{' '}
-            <span className="text-[#86c99e]">One Life at a Time</span>
+            Ogbomoso,{' '}
+            <span className="text-[#86c99e]">One Step at a Time</span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-white/70 text-base leading-relaxed mb-10 max-w-lg"
+            className="text-white/75 text-base leading-relaxed mb-10 max-w-lg"
           >
-            The Reverend Peter Olaleye Charity Foundation exists to uplift the vulnerable, empower the overlooked, and advocate for a just
-            society — right here in Ogbomoso.
+            We are a small, faith-rooted charity in Ogbomoso. We help with scholarships, healthcare, and housing — quietly,
+            honestly, and one family at a time.
           </motion.p>
 
           <motion.div
@@ -72,10 +71,10 @@ function Hero() {
             className="flex flex-wrap gap-4 mb-10"
           >
             <motion.button
-              whileHover={{ scale: 1.05, boxShadow: '0 8px 28px rgba(0,0,0,0.3)' }}
+              whileHover={{ scale: 1.05, boxShadow: '0 8px 28px rgba(0,0,0,0.35)' }}
               whileTap={{ scale: 0.97 }}
               onClick={() => document.getElementById('donate')?.scrollIntoView({ behavior: 'smooth' })}
-              className="px-7 py-3.5 bg-white text-[#1a4731] font-bold rounded-full text-sm shadow-lg"
+              className="px-8 py-4 bg-white text-[#1a4731] font-extrabold rounded-full text-sm shadow-xl tracking-wide"
             >
               Donate Now
             </motion.button>
@@ -178,7 +177,7 @@ function About() {
         <FadeIn direction="left" delay={0.15}>
           <div>
             <p className="text-[#2d6a4f] text-xs font-bold tracking-widest uppercase mb-3">Our Story</p>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0f2d1f] leading-tight mb-6" style={{ fontFamily: "'Georgia', serif" }}>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0f2d1f] leading-tight mb-6">
               Rooted in Faith,
               <br />
               Driven by Compassion
@@ -264,7 +263,7 @@ function FocusAreas() {
       <div className="max-w-6xl mx-auto px-5">
         <FadeIn className="text-center mb-14">
           <p className="text-[#2d6a4f] text-xs font-bold tracking-widest uppercase mb-3">What We Do</p>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0f2d1f]" style={{ fontFamily: "'Georgia', serif" }}>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0f2d1f]">
             Four Areas of Focus
           </h2>
         </FadeIn>
@@ -303,7 +302,7 @@ function Impact() {
       <div className="relative max-w-6xl mx-auto px-5">
         <FadeIn className="text-center mb-14">
           <p className="text-[#86c99e] text-xs font-bold tracking-widest uppercase mb-3">Our Impact</p>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white" style={{ fontFamily: "'Georgia', serif" }}>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white">
             Small Steps, Real Change
           </h2>
           <p className="text-white/55 mt-4 max-w-lg mx-auto text-sm leading-relaxed">
@@ -314,7 +313,7 @@ function Impact() {
           {stats.map(({ value, label }, i) => (
             <FadeIn key={label} delay={i * 0.1}>
               <div className="text-center bg-white/8 border border-white/12 rounded-2xl p-8">
-                <p className="text-5xl font-extrabold text-white mb-2" style={{ fontFamily: "'Georgia', serif" }}>
+                <p className="text-5xl font-extrabold text-white mb-2">
                   {value}
                 </p>
                 <p className="text-white/55 text-sm font-medium leading-tight">{label}</p>
@@ -353,7 +352,7 @@ function Stories() {
       <div className="max-w-6xl mx-auto px-5">
         <FadeIn className="text-center mb-14">
           <p className="text-[#2d6a4f] text-xs font-bold tracking-widest uppercase mb-3">Stories of Impact</p>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0f2d1f]" style={{ fontFamily: "'Georgia', serif" }}>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0f2d1f]">
             Real People. Real Change.
           </h2>
         </FadeIn>
@@ -376,7 +375,7 @@ function Stories() {
                   <span className="inline-block text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-4" style={{ backgroundColor: `${accent}18`, color: accent }}>
                     {tag}
                   </span>
-                  <h3 className="text-xl font-extrabold mb-4 leading-snug" style={{ color: accent, fontFamily: "'Georgia', serif" }}>
+                  <h3 className="text-xl font-extrabold mb-4 leading-snug" style={{ color: accent }}>
                     {title}
                   </h3>
                   <p className="text-stone-600 text-sm leading-relaxed">{body}</p>
@@ -390,7 +389,68 @@ function Stories() {
   );
 }
 
-// ─── Donation ──────────────────────────────────────────────────────────────────
+// ─── Projects ──────────────────────────────────────────────────────────────────
+function Projects() {
+  return (
+    <section id="projects" className="py-24 bg-[#f4f8f5]">
+      <div className="max-w-6xl mx-auto px-5">
+        <FadeIn className="text-center mb-14">
+          <p className="text-[#2d6a4f] text-xs font-bold tracking-widest uppercase mb-3">What We&apos;re Working On</p>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0f2d1f]">
+            Our Project
+          </h2>
+          <p className="text-stone-500 mt-4 max-w-lg mx-auto text-sm leading-relaxed">
+            A small step we&apos;re taking right now — one family, one home at a time.
+          </p>
+        </FadeIn>
+
+        <FadeIn delay={0.1}>
+          <motion.div
+            whileHover={{ y: -4, boxShadow: '0 20px 50px #1a473110' }}
+            transition={{ duration: 0.3 }}
+            className="bg-white rounded-3xl overflow-hidden border border-stone-100 shadow-sm max-w-3xl mx-auto"
+          >
+            {/* Image placeholder */}
+            <div className="w-full h-64 bg-stone-100 border-b-2 border-dashed border-stone-200 flex items-center justify-center">
+              <div className="text-center text-stone-400">
+                <div className="text-4xl mb-2">🏠</div>
+                <p className="text-sm font-medium">Project Image</p>
+                <p className="text-xs mt-1 text-stone-300">(to be added)</p>
+              </div>
+            </div>
+
+            {/* Card content */}
+            <div className="p-8 sm:p-10">
+              <span className="inline-block text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-5 bg-[#e8f5e9] text-[#1a4731]">
+                Housing & Family Support
+              </span>
+              <h3 className="text-2xl font-extrabold text-[#0f2d1f] mb-4 leading-snug">
+                Building a Home for the Quadruplets
+              </h3>
+              <p className="text-stone-600 text-sm leading-relaxed mb-8">
+                Earlier this year, we supported a local mother through a high-risk pregnancy that resulted in the birth of quadruplets.
+                All four babies arrived safely. But the joy of that moment quickly gave way to a new challenge — the family has no adequate
+                home to raise four infants. They are currently living in difficult conditions, and we believe no child should grow up that
+                way if our community can do something about it. This is our current project: raising enough to build them a simple, safe,
+                and dignified home. We are at the very beginning. Every contribution matters.
+              </p>
+              <motion.button
+                whileHover={{ scale: 1.04, boxShadow: '0 8px 28px #1a473130' }}
+                whileTap={{ scale: 0.97 }}
+                onClick={() => document.getElementById('donate')?.scrollIntoView({ behavior: 'smooth' })}
+                className="px-8 py-3.5 bg-[#1a4731] text-white font-bold rounded-full text-sm shadow-md hover:bg-[#2d6a4f] transition-colors"
+              >
+                Help Us Build Their Home
+              </motion.button>
+            </div>
+          </motion.div>
+        </FadeIn>
+      </div>
+    </section>
+  );
+}
+
+
 const PRESET_AMOUNTS = [
   { label: '₦5,000', value: '5000' },
   { label: '₦10,000', value: '10000' },
@@ -423,7 +483,7 @@ function Donation() {
       <div className="max-w-2xl mx-auto px-5">
         <FadeIn className="text-center mb-10">
           <p className="text-[#2d6a4f] text-xs font-bold tracking-widest uppercase mb-3">Support the Mission</p>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0f2d1f] mb-4" style={{ fontFamily: "'Georgia', serif" }}>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0f2d1f] mb-4">
             Make a Donation
           </h2>
           <p className="text-stone-500 text-sm leading-relaxed">Every naira given goes directly to supporting scholarships, healthcare, and community empowerment.</p>
@@ -554,7 +614,7 @@ function Involved() {
       <div className="max-w-6xl mx-auto px-5">
         <FadeIn className="text-center mb-14">
           <p className="text-[#2d6a4f] text-xs font-bold tracking-widest uppercase mb-3">Get Involved</p>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0f2d1f]" style={{ fontFamily: "'Georgia', serif" }}>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0f2d1f]">
             There's a Place for You Here
           </h2>
         </FadeIn>
@@ -567,7 +627,7 @@ function Involved() {
                 className="border-2 border-stone-100 rounded-2xl p-8 text-center hover:border-[#1a4731]/25 transition-colors h-full flex flex-col"
               >
                 <div className="text-4xl mb-4">{option.icon}</div>
-                <h3 className="font-extrabold text-[#0f2d1f] text-xl mb-3" style={{ fontFamily: "'Georgia', serif" }}>
+                <h3 className="font-extrabold text-[#0f2d1f] text-xl mb-3">
                   {option.title}
                 </h3>
                 <p className="text-stone-500 text-sm leading-relaxed mb-6 flex-1">{option.desc}</p>
@@ -611,6 +671,7 @@ export default function Home() {
       <FocusAreas />
       <Impact />
       <Stories />
+      <Projects />
       <Donation />
       <Involved />
       <Footer />
