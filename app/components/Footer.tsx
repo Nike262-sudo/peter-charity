@@ -23,7 +23,7 @@ export function Footer() {
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
             <Image
-              src="https://res.cloudinary.com/dkuda0je5/image/upload/c_trim/v1776514726/horizontal_logo_inverse_bsac0t.png"
+              src="https://res.cloudinary.com/dkuda0je5/image/upload/e_trim:10/v1776514726/horizontal_logo_inverse_bsac0t.png"
               alt="Rev. Peter Olaleye Charity Foundation logo"
               width={140}
               height={48}
