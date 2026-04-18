@@ -186,20 +186,16 @@ function About() {
               dignity, opportunity, and care, regardless of their circumstances.
             </p>
             <p className="text-stone-600 leading-relaxed mb-5 text-sm">
-              Founded by <strong className="text-[#1a4731]">Reverend Peter Olaleye</strong>, Head Pastor of New Estate Baptist Church,
-              Ogbomoso, founder and former President of the Ogbomoso Community Youth Forum (OCYF), and currently the Special Assistant on
-              Media and Community Relations to the Soun of Ogbomosoland. The foundation is a natural extension of his decades of service to
-              the people of Oyo State. Rev. Olaleye believes that genuine change begins at the grassroots level, one family, one student, one
-              community at a time.
-            </p>
-            <p className="text-stone-600 leading-relaxed mb-5 text-sm">
-              Through targeted outreach programs, educational support, youth empowerment initiatives, and community development projects, the
-              foundation works to uplift the most vulnerable and create pathways for lasting impact. We are committed not just to meeting
-              immediate needs, but to building sustainable solutions that empower individuals to thrive and contribute meaningfully to society.
-            </p>
-            <p className="text-stone-600 leading-relaxed mb-8 text-sm">
-              At its core, the foundation is driven by compassion, integrity, and a deep sense of responsibility to serve — inspiring hope,
-              restoring dignity, and transforming lives across communities.
+  The Reverend Peter Olaleye Charity Foundation was built on a simple belief: everyone deserves dignity, opportunity, and care, regardless of their circumstances.
+</p>
+
+<p className="text-stone-600 leading-relaxed mb-5 text-sm">
+  Founded by Reverend Peter Olaleye, Head Pastor of New Estate Baptist Church, Ogbomoso, founder and former President of the Ogbomoso Community Youth Forum (OCYF), and currently Special Assistant on Media and Community Relations to the Soun of Ogbomosoland, the foundation reflects his decades of service to the people of Oyo State.
+</p>
+
+<p className="text-stone-600 leading-relaxed mb-8 text-sm">
+  Through outreach, education, and youth empowerment, the foundation supports vulnerable communities and creates opportunities for lasting impact, driven by compassion, integrity, and a commitment to meaningful change.
+</p>
             </p>
             <div className="flex flex-wrap gap-6">
               {['Faith-Centered', 'Community-Driven', 'Locally Rooted'].map((label) => (
