@@ -41,11 +41,11 @@ export function Nav() {
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
           <Image
-            src="https://res.cloudinary.com/dkuda0je5/image/upload/v1776513776/horizontal_light_1_ilr2d2.jpg"
+            src="https://res.cloudinary.com/dkuda0je5/image/upload/v1776514525/horizontal_logo_stmmhz.png"
             alt="Rev. Peter Olaleye Charity Foundation logo"
-            width={150}
-            height={50}
-            className="h-12 w-auto object-contain"
+            width={190}
+            height={60}
+            className="h-14 w-auto object-contain"
             priority
           />
         </Link>
