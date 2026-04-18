@@ -19,7 +19,7 @@ export function Footer() {
         <div>
           <Link
             href="/"
-            className="flex items-center gap-3 mb-4"
+            className="flex items-center justify-start gap-3 mb-4"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
             <Image
