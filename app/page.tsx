@@ -60,7 +60,7 @@ function Hero() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="text-white/75 text-base leading-relaxed mb-10 max-w-lg"
           >
-            The Reverend Peter Olaleye Charity Foundation exists to uplift the vulnerable, empower the overlooked, and advocate for a just society — right here in Ogbomoso
+            The Reverend Peter Olaleye Charity Foundation exists to uplift the vulnerable, empower the overlooked, and advocate for a just society — right here in Ogbomoso.
           </motion.p>
 
           <motion.div
@@ -187,7 +187,7 @@ function About() {
             </p>
             <p className="text-stone-600 leading-relaxed mb-5 text-sm">
               Founded by <strong className="text-[#1a4731]">Reverend Peter Olaleye</strong>, Head Pastor of New Estate Baptist Church,
-              Ogbomoso, founder and former President of the Ogbomoso Community Youth Forum (OCYF) and currently the Special Assistant on
+              Ogbomoso, founder and former President of the Ogbomoso Community Youth Forum (OCYF), and currently the Special Assistant on
               Media and Community Relations to the Soun of Ogbomosoland. The foundation is a natural extension of his decades of service to
               the people of Oyo State. Rev. Olaleye believes that genuine change begins at the grassroots level, one family, one student, one
               community at a time.
