@@ -412,15 +412,6 @@ function Projects() {
             transition={{ duration: 0.3 }}
             className="bg-white rounded-3xl overflow-hidden border border-stone-100 shadow-sm max-w-3xl mx-auto"
           >
-            {/* Image placeholder */}
-            <div className="w-full h-64 bg-stone-100 border-b-2 border-dashed border-stone-200 flex items-center justify-center">
-              <div className="text-center text-stone-400">
-                <div className="text-4xl mb-2">🏠</div>
-                <p className="text-sm font-medium">Project Image</p>
-                <p className="text-xs mt-1 text-stone-300">(to be added)</p>
-              </div>
-            </div>
-
             {/* Card content */}
             <div className="p-8 sm:p-10">
               <span className="inline-block text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-5 bg-[#e8f5e9] text-[#1a4731]">
@@ -429,12 +420,25 @@ function Projects() {
               <h3 className="text-2xl font-extrabold text-[#0f2d1f] mb-4 leading-snug">
                 Building a Home for the Quadruplets
               </h3>
+              <p className="text-stone-600 text-sm leading-relaxed mb-6">
+                A mother we supported through a high-risk pregnancy gave birth to quadruplets, four fragile lives brought safely into the world against the odds.
+              </p>
+              {/* Image 1 */}
+              <div className="my-6 rounded-2xl border border-stone-200 bg-stone-50 p-6 text-sm text-stone-500 text-center">
+                Image 1
+              </div>
+              <p className="text-stone-600 text-sm leading-relaxed mb-6">
+                What should have been a time of relief and joy quickly met a harsh reality. The family does not have a safe or adequate home to care for four newborns and is currently living in difficult conditions. In moments like this, the difference between struggle and stability often comes down to community.
+              </p>
+              {/* Image 2 */}
+              <div className="my-6 rounded-2xl border border-stone-200 bg-stone-50 p-6 text-sm text-stone-500 text-center">
+                Image 2
+              </div>
+              <p className="text-stone-600 text-sm leading-relaxed mb-6">
+                This is our current mission: to help provide a simple, safe, and dignified home where these children can grow, and where their mother can care for them without fear or uncertainty.
+              </p>
               <p className="text-stone-600 text-sm leading-relaxed mb-8">
-                Earlier this year, we supported a local mother through a high-risk pregnancy that resulted in the birth of quadruplets.
-                All four babies arrived safely. But the joy of that moment quickly gave way to a new challenge — the family has no adequate
-                home to raise four infants. They are currently living in difficult conditions, and we believe no child should grow up that
-                way if our community can do something about it. This is our current project: raising enough to build them a simple, safe,
-                and dignified home. We are at the very beginning. Every contribution matters.
+                We are just at the beginning and every contribution, no matter how small, brings this family one step closer to a better future.
               </p>
               <motion.button
                 whileHover={{ scale: 1.04, boxShadow: '0 8px 28px #1a473130' }}
