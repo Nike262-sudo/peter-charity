@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const links = [
@@ -39,13 +40,14 @@ export function Nav() {
           className="flex items-center gap-2.5"
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
-          <div className="w-8 h-8 rounded-full bg-[#1a4731] flex items-center justify-center flex-shrink-0">
-            <span className="text-white text-xs font-bold hidden sm:block">RP</span>
-          </div>
-          <span className="font-bold text-[#1a4731] text-sm leading-tight block">
-            Rev. Peter Olaleye
-            <span className="block font-normal text-xs text-stone-500">Charity Foundation</span>
-          </span>
+          <Image
+            src="https://res.cloudinary.com/dkuda0je5/image/upload/q_auto/f_auto/v1776506963/logo_v1_dark_tq8ve4.jpg"
+            alt="Rev. Peter Olaleye Charity Foundation logo"
+            width={120}
+            height={40}
+            className="h-10 w-auto object-contain"
+            priority
+          />
         </Link>
 
         {/* Desktop links */}

@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 const socials = [
@@ -21,20 +22,13 @@ export function Footer() {
             className="flex items-center gap-3 mb-4"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
-            <div
-              className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 font-bold text-[#86c99e] text-xs"
-              style={{ background: 'rgba(134,201,158,0.15)', border: '1.5px solid rgba(134,201,158,0.3)' }}
-            >
-              RP
-            </div>
-            <div>
-              <p className="font-bold text-sm text-white leading-tight">
-                Rev. Peter Olaleye
-                <br />
-                Charity Foundation
-              </p>
-              <p className="text-xs text-white/40 mt-0.5">Ogbomoso, Oyo State · Nigeria</p>
-            </div>
+            <Image
+              src="https://res.cloudinary.com/dkuda0je5/image/upload/q_auto/f_auto/v1776507106/logo_v1_light_kpx2mh.jpg"
+              alt="Rev. Peter Olaleye Charity Foundation logo"
+              width={140}
+              height={48}
+              className="h-12 w-auto object-contain"
+            />
           </Link>
           <p className="text-sm text-white/45 leading-relaxed">Serving the community of Ogbomoso with faith, compassion, and action.</p>
         </div>
