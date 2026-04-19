@@ -478,6 +478,8 @@ function Donation() {
     navigator.clipboard.writeText('0949462000').then(() => {
       setCopied(true);
       setTimeout(() => setCopied(false), 2500);
+    }).catch(() => {
+      alert('Could not copy automatically. Please copy the account number manually: 0949462000');
     });
   };
 
