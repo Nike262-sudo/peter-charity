@@ -420,20 +420,22 @@ function Projects() {
               <h3 className="text-2xl font-extrabold text-[#0f2d1f] mb-4 leading-snug">
                 Building a Home for the Quadruplets
               </h3>
+              {/* Images: stacked on mobile, side-by-side on desktop */}
+              <div className="mt-2 mb-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="rounded-2xl border border-stone-200 bg-stone-50 p-6 text-sm text-stone-500 text-center">
+                  Image 1
+                </div>
+                <div className="rounded-2xl border border-stone-200 bg-stone-50 p-6 text-sm text-stone-500 text-center">
+                  Image 2
+                </div>
+              </div>
+              {/* Story paragraphs */}
               <p className="text-stone-600 text-sm leading-relaxed mb-6">
                 A mother we supported through a high-risk pregnancy gave birth to quadruplets, four fragile lives brought safely into the world against the odds.
               </p>
-              {/* Image 1 */}
-              <div className="my-6 rounded-2xl border border-stone-200 bg-stone-50 p-6 text-sm text-stone-500 text-center">
-                Image 1
-              </div>
               <p className="text-stone-600 text-sm leading-relaxed mb-6">
                 What should have been a time of relief and joy quickly met a harsh reality. The family does not have a safe or adequate home to care for four newborns and is currently living in difficult conditions. In moments like this, the difference between struggle and stability often comes down to community.
               </p>
-              {/* Image 2 */}
-              <div className="my-6 rounded-2xl border border-stone-200 bg-stone-50 p-6 text-sm text-stone-500 text-center">
-                Image 2
-              </div>
               <p className="text-stone-600 text-sm leading-relaxed mb-6">
                 This is our current mission: to help provide a simple, safe, and dignified home where these children can grow, and where their mother can care for them without fear or uncertainty.
               </p>
