@@ -5,10 +5,10 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 const socials = [
-  { label: 'Facebook', icon: 'f', url: 'https://facebook.com' },
+  { label: 'Facebook', icon: 'f', url: 'https://www.facebook.com/share/1CpD2AJ5qD/' },
   { label: 'Twitter', icon: '𝕏', url: 'https://twitter.com' },
   { label: 'Instagram', icon: '◎', url: 'https://instagram.com' },
-  { label: 'WhatsApp', icon: '●', url: 'https://wa.me/234' },
+  { label: 'WhatsApp', icon: '●', url: 'https://wa.me/2348160579977' },
 ];
 
 export function Footer() {
@@ -44,7 +44,7 @@ export function Footer() {
                 ✉️ contact@rpocharityfoundation.org
               </a>
             </li>
-            <li>📞 +234 — (to be added)</li>
+            <li>📞 +234 816 057 9977</li>
           </ul>
         </div>
 
