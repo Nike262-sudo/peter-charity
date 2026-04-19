@@ -6,8 +6,6 @@ import { motion } from 'framer-motion';
 
 const socials = [
   { label: 'Facebook', icon: 'f', url: 'https://www.facebook.com/share/1CpD2AJ5qD/' },
-  { label: 'Twitter', icon: '𝕏', url: 'https://twitter.com' },
-  { label: 'Instagram', icon: '◎', url: 'https://instagram.com' },
   { label: 'WhatsApp', icon: '●', url: 'https://wa.me/2348160579977' },
 ];
 
