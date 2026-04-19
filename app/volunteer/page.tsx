@@ -1,31 +1,28 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Nav } from '../components/Nav';
 import { Footer } from '../components/Footer';
 
-export default function VolunteerPage() {
-  const [form, setForm] = useState({ name: '', email: '', interest: '' });
-  const [submitted, setSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false);
+const WHATSAPP_NUMBER = '2348160579977';
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+export default function VolunteerPage() {
+  const [form, setForm] = useState({ name: '', email: '', phone: '', interest: 'Volunteer', message: '' });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (!form.name || !form.email || !form.interest) {
-      alert('Please fill in all fields.');
+    if (!form.name || !form.email || !form.phone || !form.interest) {
+      alert('Please fill in all required fields.');
       return;
     }
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-      setSubmitted(true);
-    }, 800);
+    const sanitize = (s: string) => s.replace(/[\r\n]+/g, ' ').trim();
+    const composed = `Hello, I'm interested in getting involved with the Rev. Peter Olaleye Charity Foundation.\n\nName: ${sanitize(form.name)}\nEmail: ${sanitize(form.email)}\nPhone: ${sanitize(form.phone)}\nInterest: ${sanitize(form.interest)}\nMessage: ${form.message.trim() || '(none)'}`;
+    window.location.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(composed)}`;
   };
 
   return (
@@ -71,27 +68,7 @@ export default function VolunteerPage() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="max-w-xl mx-auto bg-white rounded-3xl p-8 shadow-sm border border-stone-100"
         >
-          {submitted ? (
-            <div className="text-center py-10">
-              <div className="text-5xl mb-5">🎉</div>
-              <h2 className="text-2xl font-extrabold text-[#0f2d1f] mb-3" style={{ fontFamily: "'Georgia', serif" }}>
-                Thank You, {form.name}!
-              </h2>
-              <p className="text-stone-500 text-sm leading-relaxed mb-8">
-                We've received your interest. Our team will reach out to <strong className="text-[#1a4731]">{form.email}</strong> shortly.
-              </p>
-              <Link href="/">
-                <motion.span
-                  whileHover={{ scale: 1.04 }}
-                  whileTap={{ scale: 0.97 }}
-                  className="inline-block px-8 py-3.5 bg-[#1a4731] text-white font-bold rounded-full text-sm"
-                >
-                  ← Back to Home
-                </motion.span>
-              </Link>
-            </div>
-          ) : (
-            <form onSubmit={handleSubmit} className="space-y-5">
+          <form onSubmit={handleSubmit} className="space-y-5">
               <div>
                 <label className="block text-xs font-bold text-stone-400 uppercase tracking-widest mb-1.5">
                   Full Name <span className="text-red-400">*</span>
@@ -102,6 +79,7 @@ export default function VolunteerPage() {
                   value={form.name}
                   onChange={handleChange}
                   placeholder="Your full name"
+                  required
                   className="w-full border-2 border-stone-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#1a4731] transition-colors"
                 />
               </div>
@@ -115,40 +93,62 @@ export default function VolunteerPage() {
                   value={form.email}
                   onChange={handleChange}
                   placeholder="you@email.com"
+                  required
                   className="w-full border-2 border-stone-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#1a4731] transition-colors"
                 />
               </div>
               <div>
                 <label className="block text-xs font-bold text-stone-400 uppercase tracking-widest mb-1.5">
-                  Area of Interest <span className="text-red-400">*</span>
+                  Phone Number <span className="text-red-400">*</span>
+                </label>
+                <input
+                  type="tel"
+                  name="phone"
+                  value={form.phone}
+                  onChange={handleChange}
+                  placeholder="Your phone number"
+                  required
+                  className="w-full border-2 border-stone-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#1a4731] transition-colors"
+                />
+              </div>
+              <div>
+                <label className="block text-xs font-bold text-stone-400 uppercase tracking-widest mb-1.5">
+                  Interest Type <span className="text-red-400">*</span>
                 </label>
                 <select
                   name="interest"
                   value={form.interest}
                   onChange={handleChange}
+                  required
                   className="w-full border-2 border-stone-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#1a4731] transition-colors bg-white text-stone-700"
                 >
-                  <option value="">Select an area...</option>
-                  <option>Healthcare Outreach</option>
-                  <option>Scholarship Support</option>
-                  <option>Youth Empowerment</option>
-                  <option>Community Events</option>
-                  <option>Human Rights Advocacy</option>
-                  <option>General Support</option>
+                  <option value="Volunteer">Volunteer</option>
+                  <option value="Partner">Partner</option>
                 </select>
+              </div>
+              <div>
+                <label className="block text-xs font-bold text-stone-400 uppercase tracking-widest mb-1.5">
+                  Message <span className="text-stone-300">(optional)</span>
+                </label>
+                <textarea
+                  name="message"
+                  value={form.message}
+                  onChange={handleChange}
+                  rows={4}
+                  placeholder="Tell us a little about yourself and how you'd like to help..."
+                  className="w-full border-2 border-stone-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#1a4731] transition-colors resize-none"
+                />
               </div>
               <motion.button
                 type="submit"
-                disabled={loading}
                 whileHover={{ scale: 1.02, boxShadow: '0 8px 24px #1a473135' }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full py-4 bg-[#1a4731] text-white font-bold rounded-xl text-sm hover:bg-[#2d6a4f] transition-colors disabled:opacity-70"
+                className="w-full py-4 bg-[#1a4731] text-white font-bold rounded-xl text-sm hover:bg-[#2d6a4f] transition-colors"
               >
-                {loading ? 'Submitting...' : 'Submit Volunteer Application →'}
+                Continue on WhatsApp →
               </motion.button>
-              <p className="text-center text-xs text-stone-400">We'll get back to you within 2–3 business days.</p>
+              <p className="text-center text-xs text-stone-400">You&apos;ll be redirected to WhatsApp to complete your request.</p>
             </form>
-          )}
         </motion.div>
       </div>
 
